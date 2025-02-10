@@ -59,6 +59,7 @@ export function selectMediaCollection(offset, limit, order, desc, type) {
   const typeB = type && type !== "any" ? type : "show";
   let orderSQL = "COALESCE(date, year || '-01-01')";
   if (order === "title") orderSQL = "title";
+  else if(order === "added") orderSQL = "added_on"
   else if (order === "duration") orderSQL = "duration";
   else if (order === "random") orderSQL = "RANDOM()";
 
