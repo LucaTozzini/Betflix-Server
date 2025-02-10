@@ -37,7 +37,7 @@ For a mobile client, an Android APK can be downloaded from the [Betflix website]
 ## REST API
 | Endpoint | Method | Query | Returns | Description |
 | --- | --- | --- | --- | --- |
-| /media/	| GET |	offset, limit, order (year, title, duration, random), desc, type (movie, show, any) |	mediaObj[] |	Get a media collection |
+| /media/	| GET |	offset, limit, desc, order (added, year, title, duration, random), type (movie, show, any) |	mediaObj[] | Get a media collection |
 | /media/<media_id>|	GET	| |	mediaObj	|Get a media singleton|
 | /media/<media_id>/seasons	| GET	| |	seasonObj[] |	Get the seasons collection |
 | /media/<media_id>/seasons/<season_num>|	GET	| |	episodeObj[] |	Get a season |
