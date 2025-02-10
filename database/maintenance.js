@@ -11,7 +11,8 @@ async function createDB() {
           title TEXT,
           year INT,
           duration INT,
-          type TEXT
+          type TEXT,
+          added_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
         CREATE TABLE IF NOT EXISTS episodes (
           media_id INT,
