@@ -8,6 +8,7 @@ const API_ADDRESS = "https://yts.mx/api/v2";
 export async function fetchMovieTorrents(imdbId) {
   try {
     const response = await fetch(`${API_ADDRESS}/movie_details.json?imdb_id=${imdbId}`);
+    if(!response.ok) return null;
     const json = await response.json();
     return json?.data?.movie?.torrents
   } catch (err) {
